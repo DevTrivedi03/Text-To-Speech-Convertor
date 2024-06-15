@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* added padding for small screens */
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background: #2c2c2c;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    max-width: 90%; /* responsive width */
+}
+
+.container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.container h1 span {
+    color: #ffa500;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    background: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #555555;
+    border-radius: 10px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #cccccc;
+}
+
+.row {
+    display: flex;
+    flex-direction: column; /* stacked vertically by default */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    gap: 20px;
+}
+
+button, select {
+    width: 100%; /* full width by default */
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+button:hover, select:hover {
+    background: #e59400;
+}
+
+button img {
+    margin-right: 10px;
+}
+
+select {
+    appearance: none;
+    padding-right: 40px;
+    background-image: url(dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 15px center;
+}
+
+select option {
+    color: #000000;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .row {
+        flex-direction: row; /* horizontal layout for larger screens */
+    }
+}
